@@ -1,4 +1,3 @@
-// import React from "react";
 import HeroCard from "../components/HeroCard";
 import { ArrowRight, Flag } from "lucide-react";
 import AImg from "../assets/AI.png";
@@ -24,12 +23,7 @@ const heroCardDetail = [
   },
 ];
 
-const heroImg = [
-    image: '../assets/AI.png',
-    alt: 'AI'
-]
-
-const Home = () => {
+const HomePage = () => {
   return (
     <div className="mt-10">
       <div className="w-2/3 mx-auto flex flex-col justify-center">
@@ -55,8 +49,9 @@ const Home = () => {
           className="mx-auto w-2/5"
         />
         <div className="grid grid-cols-4 gap-5 w-3/5 mx-auto">
-          {heroCardDetail.map((item) => (
+          {heroCardDetail.map((item, index) => (
             <HeroCard
+              key={index}
               title={item.title}
               content={item.content}
               more={item.more}
@@ -67,6 +62,7 @@ const Home = () => {
           <img src={AImg} alt="" className="rounded-lg mt-3 " />
         </div>
       </div>
+
       <div className="w-2/3 mx-auto">
         <div className="text-center">
           <h1 className="text-2xl">Endless way to use it</h1>
@@ -74,7 +70,6 @@ const Home = () => {
         </div>
         <div className="grid grid-cols-2">
           <div className="border">
-            <Home />
             <p>Company Wiki</p>
             <p className="flex">
               Browse template{" "}
@@ -170,4 +165,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

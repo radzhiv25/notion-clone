@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import HomePage from "./pages/Home";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,7 +17,7 @@ function App() {
         </span>
       </div> */}
       <Navbar />
-      <Home />
+      <HomePage />
       <Footer />
     </div>
   );
