@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="">
+      {/* <div className="text-center text-sm p-3 bg-gray-200 flex justify-center items-center space-x-3">
+        <p className="bg-blue-500 text-white rounded-full mx-1 px-2">New</p>
+        <p className="">Introducing Q&A - a new way to get answers in Notion.</p>
+        <span className="font-bold">
+          Sign up for Q&A waitlist
+        </span>
+      </div> */}
+      <Navbar />
+      <Home />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
