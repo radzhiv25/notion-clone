@@ -180,21 +180,21 @@ const HomePage = () => {
             <img
               src={Strike}
               alt=""
-              className="relative lg:top-48 top-10 lg:w-3/5 w-3/4 lg:right-0 right-1 mx-auto"
+              className="relative lg:top-48 top-12 lg:w-3/5 w-3/4 lg:right-0 right-1 mx-auto"
             />
             <div className="flex flex-row-reverse items-end w-1/2 mx-auto">
               <img
                 src="https://www.notion.so/cdn-cgi/image/format=webp,width=640/front-static/pages/home/giant-pencil-illustration.png"
                 alt=""
-                className="w-2/5 relative left-32 bottom-8 "
+                className="w-2/5 relative lg:left-32 left-20 lg:bottom-8 bottom-10"
               />
               <img
                 src="https://www.notion.so/cdn-cgi/image/format=webp,width=256/front-static/pages/home/pencil-peek-illustration-V2.png"
                 alt=""
-                className="w-2/5 relative left-[60%] bottom-1 lg:hidden visible"
+                className="w-2/5 relative left-[60%] bottom-1 hidden"
               />
             </div>
-            <div className="relative lg:right-0 right-32 lg:w-3/5 lg:mx-auto lg:bottom-10 bottom-20 mix-blend-multiply">
+            <div className="relative lg:right-0 right-32 lg:w-3/5 lg:mx-auto lg:bottom-10 bottom-16 mix-blend-multiply">
               <img
                 src="https://www.notion.so/cdn-cgi/image/format=webp,width=1200/front-static/pages/home/tools-before-notion-V2.png"
                 alt=""
@@ -224,13 +224,13 @@ const HomePage = () => {
 
       <div className="lg:w-3/5 mx-auto my-10">
         <div className="lg:flex lg:flex-row-reverse items-center space-x-10 -ml-10">
-          <h1 className="font-bold lg:text-5xl text-4xl">
+          <h1 className="font-bold lg:text-5xl text-4xl lg:ml-0 ml-12">
             Power building blocks
           </h1>
           <img
             src="https://www.notion.so/cdn-cgi/image/format=auto,width=640,quality=100/front-static/shared/illustrations/blocks/topPeekI.png"
             alt=""
-            className="lg:w-1/5 w-2/5"
+            className="lg:w-1/5 w-2/5 lg:ml-0 ml-5"
           />
         </div>
         <div className="border p-5 -mt-2 mx-4 rounded-xl">
