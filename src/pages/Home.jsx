@@ -186,7 +186,7 @@ const HomePage = () => {
               <img
                 src="https://www.notion.so/cdn-cgi/image/format=webp,width=640/front-static/pages/home/giant-pencil-illustration.png"
                 alt=""
-                className="w-2/5 relative left-32 bottom-8 lg:visible hidden"
+                className="w-2/5 relative left-32 bottom-8 "
               />
               <img
                 src="https://www.notion.so/cdn-cgi/image/format=webp,width=256/front-static/pages/home/pencil-peek-illustration-V2.png"
@@ -223,14 +223,14 @@ const HomePage = () => {
       </div>
 
       <div className="lg:w-3/5 mx-auto my-10">
-        <div className="lg:flex lg:flex-row-reverse items-center space-x-10">
-          <h1 className="font-bold lg:text-5xl text-4xl text-center">
+        <div className="lg:flex lg:flex-row-reverse items-center space-x-10 -ml-10">
+          <h1 className="font-bold lg:text-5xl text-4xl">
             Power building blocks
           </h1>
           <img
             src="https://www.notion.so/cdn-cgi/image/format=auto,width=640,quality=100/front-static/shared/illustrations/blocks/topPeekI.png"
             alt=""
-            className="lg:w-1/5 w-2/5 lg:mt-0 mt-6"
+            className="lg:w-1/5 w-2/5"
           />
         </div>
         <div className="border p-5 -mt-2 mx-4 rounded-xl">
@@ -392,7 +392,7 @@ const HomePage = () => {
           </p>
         </div>
         <img src={Avatar} alt="" className="lg:w-3/5 mx-auto" />
-        <div className="grid lg:grid-cols-3 grid-rows-3 lg:w-3/5 lg:mx-auto mx-4 gap-5">
+        <div className="grid lg:grid-cols-3 lg:w-3/5 lg:mx-auto mx-4 gap-5">
           <div className="rounded-xl p-5 space-y-2 border">
             <h1 className="text-6xl text-blue-400 font-bold">1M+</h1>
             <p className="text-sm">community members</p>
@@ -406,7 +406,7 @@ const HomePage = () => {
             <p className="text-sm">countries represented</p>
           </div>
         </div>
-        <div className="my-10 lg:w-3/5 lg:mx-auto mx-4 grid lg:grid-cols-2 grid-rows-2 gap-5">
+        <div className="my-5 lg:w-3/5 lg:mx-auto mx-4 grid lg:grid-cols-2 grid-cols-1 gap-5">
           <div className="rounded border">
             <div className="p-5 text-lg">
               <h2 className="font-semibold">An always-on suppport network</h2>

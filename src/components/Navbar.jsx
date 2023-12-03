@@ -16,7 +16,7 @@ const Navbar = () => {
         <li>Resources</li>
         <li>Pricing</li>
       </ul>
-      <div className="lg:flex lg:visible hidden items-center">
+      <div className="lg:flex items-center lg:visible hidden">
         <p className="px-3 border-r">Request a demo</p>
         <div className="p-2 flex items-center space-x-3 text-sm">
           <button className="p-2">Log in</button>
