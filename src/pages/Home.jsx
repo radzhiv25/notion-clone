@@ -37,20 +37,6 @@ const heroCardDetail = [
     content: "Simple powerful, beautiful. Next-gen notes & docs.",
   },
 ];
-const img = [
-  {
-    src: "https://www.notion.so/cdn-cgi/image/format=webp,width=3840/front-static/pages/home/persona-carousel/screenshots/hr.png",
-    alt: "HR",
-  },
-  {
-    src: "https://www.notion.so/cdn-cgi/image/format=webp,width=3840/front-static/pages/home/persona-carousel/screenshots/hr.png",
-    alt: "HR",
-  },
-  {
-    src: "https://www.notion.so/cdn-cgi/image/format=webp,width=3840/front-static/pages/home/persona-carousel/screenshots/hr.png",
-    alt: "HR",
-  },
-];
 
 const HomePage = () => {
   return (
@@ -188,11 +174,11 @@ const HomePage = () => {
                 alt=""
                 className="w-2/5 relative lg:left-32 left-20 lg:bottom-8 bottom-10"
               />
-              <img
+              {/* <img
                 src="https://www.notion.so/cdn-cgi/image/format=webp,width=256/front-static/pages/home/pencil-peek-illustration-V2.png"
                 alt=""
                 className="w-2/5 relative left-[60%] bottom-1 hidden"
-              />
+              /> */}
             </div>
             <div className="relative lg:right-0 right-32 lg:w-3/5 lg:mx-auto lg:bottom-10 bottom-16 mix-blend-multiply">
               <img
@@ -223,8 +209,8 @@ const HomePage = () => {
       </div>
 
       <div className="lg:w-3/5 mx-auto my-10">
-        <div className="lg:flex lg:flex-row-reverse items-center space-x-10 -ml-10">
-          <h1 className="font-bold lg:text-5xl text-4xl lg:ml-0 ml-12">
+        <div className="lg:flex lg:flex-row-reverse items-center space-x-10 lg:-ml-10 -ml-0 w-max">
+          <h1 className="font-bold lg:text-5xl text-4xl lg:ml-0 ml-5">
             Power building blocks
           </h1>
           <img
@@ -364,17 +350,15 @@ const HomePage = () => {
             <h3 className="text-center">HR</h3>
           </div>
         </div>
-        <div className="flex flex-row overflow-scroll">{
-          img.map((item, index) => (
-            <img key={index} src={item.src} alt={item.alt} className="rounded-xl w-full" />
-          ))
-        }</div>
+        <div className="">
+          <img src="https://www.notion.so/cdn-cgi/image/format=webp,width=3840/front-static/pages/home/persona-carousel/screenshots/hr.png" alt="" className="rounded-xl shadow-xl"/>
+        </div>
       </div>
 
       <div className="my-10">
         <div className="space-y-4">
           <div className="space-y-2">
-            <h1 className="text-center text-5xl font-bold">
+            <h1 className="text-center lg:text-5xl text-4xl font-bold">
               Join a global movement.
               <br />
               Unleash your creativity.
@@ -453,52 +437,50 @@ const HomePage = () => {
                   src="https://www.notion.so/cdn-cgi/image/format=auto,width=3840,quality=100/front-static/pages/home/avatars/twitter-avatar-deborah.png"
                   alt=""
                 />
-                <div className="">
-                  <p>Deborah Mecca</p>
-                  <p>@DebMecca</p>
+                <div className="leading-tight">
+                  <p className="font-semibold">Deborah Mecca</p>
+                  <p className="text-gray-500">@DebMecca</p>
                 </div>
               </div>
               <p>
                 I used to HATE documenting things. And then I started using
-                @NotionHQ and I document a lot. A LOT A LOT. Now I just realize
-                that it wasn't that I hated documenting, I just hated Google
-                Docs.
+                <span className="text-blue-400"> @NotionHQ </span>
+                and I document a lot. A LOT A LOT. Now I just realize that it
+                wasn't that I hated documenting, I just hated Google Docs.
               </p>
             </div>
             <div className="p-3 border rounded-xl">
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 mb-4">
                 <img
-                  src="https://www.notion.so/cdn-cgi/image/format=auto,width=3840,quality=100/front-static/pages/home/avatars/twitter-avatar-deborah.png"
+                  src="https://www.notion.so/cdn-cgi/image/format=auto,width=3840,quality=100/front-static/pages/home/avatars/twitter-avatar-andre.png"
                   alt=""
                 />
-                <div className="">
-                  <p>Deborah Mecca</p>
-                  <p>@DebMecca</p>
+                <div className="leading-tight">
+                  <p className="font-semibold">André Blackman</p>
+                  <p className="text-gray-500">@mindofandre</p>
                 </div>
               </div>
               <p>
-                I used to HATE documenting things. And then I started using
-                @NotionHQ and I document a lot. A LOT A LOT. Now I just realize
-                that it wasn't that I hated documenting, I just hated Google
-                Docs.
+                One of the most incredible things about{" "}
+                <span className="text-blue-400">@NotionHQ</span> is the dynamic
+                community being built - creating and sharing at its best.
               </p>
             </div>
             <div className="p-3 border rounded-xl">
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 mb-4">
                 <img
-                  src="https://www.notion.so/cdn-cgi/image/format=auto,width=3840,quality=100/front-static/pages/home/avatars/twitter-avatar-deborah.png"
+                  src="https://www.notion.so/cdn-cgi/image/format=auto,width=3840,quality=100/front-static/pages/home/avatars/twitter-avatar-oliver.png"
                   alt=""
                 />
-                <div className="">
-                  <p>Deborah Mecca</p>
-                  <p>@DebMecca</p>
+                <div className="leading-tight">
+                  <p className="font-semibold">Oliver Peyre</p>
+                  <p className="text-gray-500">@opeyre</p>
                 </div>
               </div>
               <p>
-                I used to HATE documenting things. And then I started using
-                @NotionHQ and I document a lot. A LOT A LOT. Now I just realize
-                that it wasn't that I hated documenting, I just hated Google
-                Docs.
+                <span className="text-blue-400">@NotionHQ</span> Truly impressed
+                by the velocity and quality of your work. Making using Notion
+                even more fun week after week!
               </p>
             </div>
           </div>
