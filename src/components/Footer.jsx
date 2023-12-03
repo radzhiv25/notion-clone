@@ -7,6 +7,8 @@ import {
   FacebookIcon,
   LinkedinIcon,
   YoutubeIcon,
+  Globe,
+  ChevronDown,
 } from "lucide-react";
 // const footerLinks = [
 //   {
@@ -59,8 +61,8 @@ import {
 const Footer = () => {
   return (
     <div className="mx-2 py-20 border-t ">
-      <div className="w-3/5 mx-auto grid grid-cols-4">
-        <div className="flex flex-col space-y-3">
+      <div className="w-4/6 mx-auto grid grid-cols-4">
+        <div className="flex flex-col space-y-8">
           <div className="flex items-center">
             <img src={NotionLogo} alt="" className="w-10" />
             <h1 className="text-black font-semibold text-lg">Notion</h1>
@@ -84,8 +86,13 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          <div className="flex items-center space-x-2 p-2 border rounded-md w-max">
+            <Globe className="w-4" />
+            <button className="">English</button>
+            <ChevronDown className="w-4" />
+          </div>
         </div>
-        <div className="space-y-10">
+        <div className="space-y-11">
           <div className="space-y-1">
             <h2>Product</h2>
             <ul className="text-gray-500 space-y-1">
@@ -112,18 +119,18 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="space-y-5">
-          <div className="">
+        <div className="space-y-6">
+          <div className="space-y-1">
             <h2>Download</h2>
-            <ul className="text-gray-500">
+            <ul className="text-gray-500 space-y-1">
               <li>iOS & Android</li>
               <li>Mac & Windows</li>
               <li>Web Clipper</li>
             </ul>
           </div>
-          <div className="">
+          <div className="space-y-1">
             <h2>Build</h2>
-            <ul className="text-gray-500">
+            <ul className="text-gray-500 space-y-1">
               <li>Templates</li>
               <li>Integrations</li>
               <li>API docs</li>
@@ -132,9 +139,9 @@ const Footer = () => {
               <li>Become an affliliate</li>
             </ul>
           </div>
-          <div className="">
+          <div className="space-y-1">
             <h2>Learn</h2>
-            <ul className="text-gray-500">
+            <ul className="text-gray-500 space-y-1">
               <li>Customer Stories</li>
               <li>Help Center</li>
               <li>Webinars</li>
@@ -144,9 +151,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="space-y-4">
-          <div className="">
+          <div className="space-y-1">
             <h2>Get Started</h2>
-            <ul className="text-gray-500">
+            <ul className="text-gray-500 space-y-1">
               <li>Switch from Confluence</li>
               <li>Switch from Asana</li>
               <li>Switch from Evernote</li>
@@ -155,9 +162,9 @@ const Footer = () => {
               <li>Compare vs Jira</li>
             </ul>
           </div>
-          <div className="">
+          <div className="space-y-1">
             <h2>Resources</h2>
-            <ul className="text-gray-500">
+            <ul className="text-gray-500 space-y-1">
               <li>Pricing</li>
               <li>About Us</li>
               <li>Careers</li>
@@ -172,7 +179,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-sm w-4/6 mt-10 ml-auto border">
+      <div className="text-sm w-4/6 mt-10 ml-auto">
         <p>Do Not Sell or Share My Info</p>
         <p className="flex items-center text-gray-400">
           <span>
