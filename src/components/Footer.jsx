@@ -60,7 +60,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="lg:mx-2 mx-3 lg:py-20 py-10 border-t ">
+    <div className="lg:mx-2 mx-4 lg:py-20 py-10 border-t ">
       <div className="lg:w-4/6 mx-auto lg:grid lg:grid-cols-4">
         <div className="flex flex-col space-y-8">
           <div className="flex items-center">
