@@ -37,21 +37,21 @@ const heroCardDetail = [
   },
 ];
 
-  const heroComponents = [Sparkles, BookOpenText, Target, FileText];
+const heroComponents = [Sparkles, BookOpenText, Target, FileText];
 
 const HomePage = () => {
   return (
-    <div className="mt-10">
-      <div className="w-2/3 mx-auto flex flex-col justify-center">
-        <h1 className="text-center text-6xl font-bold leading-snuff">
+    <div className="lg:mt-10 mt-6">
+      <div className="lg:w-2/3 w-auto mx-auto flex flex-col justify-center">
+        <h1 className="text-center lg:text-6xl text-5xl font-bold leading-snuff lg:mx-0 mx-10">
           Write, plan, share.
-          <br />
+          {/* <br /> */}
           With AI at your side.
         </h1>
-        <p className="mt-3 text-center font-medium text-2xl">
-          Notion is connected workspace where better, faster work happens.
+        <p className="mt-3 lg:mx-0 mx-10 text-center font-medium text-2xl">
+          Notion is the connected workspace where better, faster work happens.
         </p>
-        <button className="mt-5 mx-auto p-2 bg-black text-white rounded text-md flex items-center">
+        <button className="mt-5 mx-auto p-2 bg-black text-white rounded text-lg flex items-center">
           Get Notion free
           <span>
             <ArrowRight className="w-4 ml-1" />
@@ -62,39 +62,44 @@ const HomePage = () => {
         <img
           src="https://www.notion.so/cdn-cgi/image/format=webp,width=3840/https://images.ctfassets.net/spoqsaf9291f/3csRrNi1u82ymVlwjfo2E6/02516e52af15501acd822d3e7a03baf9/home-hero.png"
           alt=""
-          className="mx-auto w-2/5"
+          className="mx-auto lg:w-2/5"
         />
-        <div className="grid grid-cols-4 gap-5 w-3/5 mx-auto">
-          {heroCardDetail.map((item, index) => (
+        <div className="lg:grid lg:grid-cols-4 gap-5 lg:w-3/5 lg:mx-auto mx-3 flex overflow-x">
+          {/* {heroCardDetail.map((item, index) => (
             <HeroCard
               key={index}
               title={item.title}
               content={item.content}
               more={item.more}
             />
-          ))}
+          ))} */}
+          <HeroCard
+            title="AI"
+            content="Ask literally anything Notion will answer."
+            more="Now with Q&A"
+          />
         </div>
-        <div className="w-3/5 mx-auto">
+        <div className="lg:w-3/5 lg:mx-auto mx-3">
           <img src={AImg} alt="" className="rounded-lg mt-3 " />
         </div>
       </div>
 
-      <div className="w-3/5 mx-auto my-10 ">
-        <h1 className="text-center font-bold text-5xl">
+      <div className="lg:w-3/5 mx-auto my-10">
+        <h1 className="text-center font-bold lg:text-5xl text-4xl lg:mx-0 mx-10">
           Millions run on Notion every day
         </h1>
-        <p className="text-center">
+        <p className="text-center my-3">
           Powering the world's best teams, from next generation startups to
           established enterprises.
         </p>
-        <p className="flex items-center w-max mx-auto text-blue-400">
-          Read Customer Stories{" "}
+        <p className="flex items-center w-max mx-auto text-blue-400 mb-5">
+          Read Customer Stories
           <span>
             <ArrowRight className="w-4" />
           </span>
         </p>
         <div className="space-y-5">
-          <div className="w-3/4 mx-auto grid grid-cols-6 gap-5 items-center">
+          <div className="lg:w-3/5 w-2/3 mx-auto grid lg:grid-cols-6 grid-cols-3 gap-5 items-center">
             <img
               src="https://images.ctfassets.net/spoqsaf9291f/502ApiNcRHgIwrDU8XRYTQ/c70d8752079a40241d08ec85dac5f93d/figma-logo.png"
               alt=""
@@ -112,7 +117,7 @@ const HomePage = () => {
               alt=""
             />
             <img
-              src="https://images.ctfassets.net/spoqsaf9291f/6dIueLe6mDK6HhNObFq2On/a6cd5c6aa443fe0fc69386522acf7b70/amazon.png"
+              src="https://images.ctfassets.net/spoqsaf9291f/6dIueLe6lgK6HhNObFq2On/a6cd5c6aa443fe0fc69386522acf7b70/amazon.png"
               alt=""
             />
             <img
@@ -120,7 +125,7 @@ const HomePage = () => {
               alt=""
             />
           </div>
-          <div className="w-3/5 mx-auto grid grid-cols-6 gap-5 items-center">
+          <div className="lg:w-3/5 w-3/4 mx-auto grid lg:grid-cols-6 grid-cols-3 gap-5 items-center">
             <img
               src="https://images.ctfassets.net/spoqsaf9291f/LnKYnStAE4vKs51ejLRj2/69cb3e0382538d4c925208ea24f253f5/General_Electric_logo.svg__1_.png"
               alt=""
@@ -146,7 +151,7 @@ const HomePage = () => {
               alt=""
             />
           </div>
-          <div className="w-1/5 mx-auto grid grid-cols-2 gap-5 items-center">
+          <div className="lg:w-1/5 w-1/4 mx-auto lg:grid lg:grid-cols-2 flex gap-5 items-center">
             <img
               src="https://images.ctfassets.net/spoqsaf9291f/4r1tX1hoz2RZigBJYbFbBJ/37e1dc9aa41342497d3e35a31649b2ae/angel-list.png"
               alt=""
@@ -159,7 +164,7 @@ const HomePage = () => {
         </div>
         <div className="flex items-center my-10">
           <div className="">
-            <h1 className="relative top-32 font-bold text-center text-5xl">
+            <h1 className="relative lg:top-32 font-bold text-center lg:text-5xl text-4xl">
               Consolidate tools.
               <br />
               Cut costs.
@@ -167,16 +172,21 @@ const HomePage = () => {
             <img
               src={Strike}
               alt=""
-              className="relative top-48 w-3/5 mx-auto"
+              className="relative lg:top-48 lg:w-3/5 mx-auto"
             />
             <div className="flex flex-row-reverse items-end w-1/2 mx-auto">
               <img
                 src="https://www.notion.so/cdn-cgi/image/format=webp,width=640/front-static/pages/home/giant-pencil-illustration.png"
                 alt=""
-                className="w-2/5 relative left-32 bottom-8"
+                className="w-2/5 relative left-32 bottom-8 lg:visible hidden"
+              />
+              <img
+                src="https://www.notion.so/cdn-cgi/image/format=webp,width=256/front-static/pages/home/pencil-peek-illustration-V2.png"
+                alt=""
+                className="w-2/5 relative left-32 bottom-8 lg:hidden visible"
               />
             </div>
-            <div className="relative w-3/5 mx-auto bottom-10 mix-blend-multiply">
+            <div className="relative lg:w-3/5 lg:mx-auto bottom-10 mix-blend-multiply">
               <img
                 src="https://www.notion.so/cdn-cgi/image/format=webp,width=1200/front-static/pages/home/tools-before-notion-V2.png"
                 alt=""
@@ -186,17 +196,17 @@ const HomePage = () => {
           </div>
         </div>
         <div className="text-center space-y-3">
-          <blockquote className="text-4xl w-2/3 mx-auto font-[Roboto]">
-            "Notion Adapts to your needs. It's as minimal or as powerful as you
-            need it to be"
+          <blockquote className="lg:text-4xl text-2xl lg:w-2/3 w-3/4 mx-auto font-[Roboto]">
+            "We got rid of nearly a dozen different tools because of what Notion
+            does for us."
           </blockquote>
-          <div className="flex items-center gap-3 mx-auto w-max">
+          <div className="flex lg:flex-row flex-col items-center gap-3 mx-auto w-max">
             <img
               src="https://www.notion.so/cdn-cgi/image/format=webp,width=256/front-static/shared/logos/color/metalab.png"
               alt=""
-              className="w-16"
+              className="lg:w-16 w-36"
             />
-            <div className="text-left leading-normal text-sm">
+            <div className="lg:text-left text-center leading-normal lg:text-sm">
               <p className="font-semibold">Justin Watt</p>
               <p>Director of Ops & Marketing, Meta labs</p>
             </div>
@@ -204,16 +214,18 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="w-3/5 mx-auto my-10">
-        <div className="flex items-center space-x-10">
+      <div className="lg:w-3/5 mx-auto my-10">
+        <div className="lg:flex lg:flex-row-reverse items-center space-x-10">
+          <h1 className="font-bold lg:text-5xl text-4xl text-center">
+            Power building blocks{" "}
+          </h1>
           <img
             src="https://www.notion.so/cdn-cgi/image/format=auto,width=640,quality=100/front-static/shared/illustrations/blocks/topPeekI.png"
             alt=""
-            className="w-1/5"
+            className="lg:w-1/5 w-2/5 lg:mt-0 mt-6"
           />
-          <h1 className="font-bold text-5xl">Power building blocks </h1>
         </div>
-        <div className="border p-5 -mt-2 rounded-lg">
+        <div className="border p-5 -mt-2 mx-3 rounded-lg">
           <Shuffle className="text-blue-500 my-2" />
           <h2 className="font-semibold text-lg">
             Visualize, filter & sort any way you want.
@@ -228,16 +240,16 @@ const HomePage = () => {
             alt=""
             className="border my-5 rounded-lg"
           />
-          <div className="grid grid-cols-6 text-sm w-3/5 mx-auto gap-3 text-center">
-            <div className="p-1 border rounded-md">Board</div>
-            <div className="p-1 border rounded-md">Table</div>
-            <div className="p-1 border rounded-md">Timeline</div>
-            <div className="p-1 border rounded-md">Calendar</div>
-            <div className="p-1 border rounded-md">Gallery</div>
-            <div className="p-1 border rounded-md">List</div>
+          <div className="lg:grid lg:grid-cols-6 flex flex-wrap text-sm lg:w-3/5 mx-auto gap-3 text-center">
+            <div className="p-1 border rounded-lg">Board</div>
+            <div className="p-1 border rounded-lg">Table</div>
+            <div className="p-1 border rounded-lg">Timeline</div>
+            <div className="p-1 border rounded-lg">Calendar</div>
+            <div className="p-1 border rounded-lg">Gallery</div>
+            <div className="p-1 border rounded-lg">List</div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-5 my-10">
+        <div className="grid lg:grid-cols-2 gap-5 lg:my-10 my-5 lg:mx-0 mx-3">
           <div className="border rounded-xl">
             <div className="m-5">
               <Eye className="text-blue-500" />
@@ -272,17 +284,17 @@ const HomePage = () => {
           </div>
         </div>
         <div className="text-center space-y-3">
-          <blockquote className="text-4xl w-2/3 mx-auto font-[Roboto]">
+          <blockquote className="lg:text-4xl text-3xl lg:w-2/3 lg:mx-auto mx-3 font-[Roboto]">
             "Notion Adapts to your needs. It's as minimal or as powerful as you
             need it to be"
           </blockquote>
-          <div className="flex items-center gap-3 mx-auto w-max">
+          <div className="flex lg:flex-row flex-col items-center gap-3 mx-auto w-max">
             <img
               src="https://www.notion.so/cdn-cgi/image/format=webp,width=96/front-static/shared/logos/color/match-group.png"
               alt=""
-              className="w-8"
+              className="lg:w-8 w-9"
             />
-            <div className="text-left leading-normal text-sm">
+            <div className="lg:text-left text-center leading-normal lg:text-sm text-lg">
               <p className="font-semibold">Ram Makhani</p>
               <p>Director of Product, Match group</p>
             </div>
@@ -290,56 +302,56 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="w-3/5 mx-auto">
-        <h1 className="text-5xl font-bold text-center">
+      <div className="lg:w-3/5 lg:mx-auto mx-3">
+        <h1 className="lg:text-5xl text-3xl font-bold text-center">
           Every team, side-by-side
         </h1>
-        <div className="grid grid-cols-6 gap-4 my-5">
-          <div className="p-4 border rounded-xl">
+        <div className="lg:grid lg:grid-cols-6 flex flex-wrap items-center gap-4 my-5">
+          <div className="lg:p-4 p-1 border lg:rounded-xl rounded-lg">
             <img
               src="https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/home/persona-carousel/icons/engineering-v2.png"
               alt=""
-              className="w-3/5 mx-auto"
+              className="w-3/5 mx-auto lg:visible hidden"
             />
             <h3 className="text-center">Engineering</h3>
           </div>
-          <div className="p-4 border rounded-xl">
+          <div className="lg:p-4 p-1 border lg:rounded-xl rounded-lg">
             <img
               src="https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/home/persona-carousel/icons/design-v2.png"
               alt=""
-              className="w-3/5 mx-auto"
+              className="w-3/5 mx-auto lg:visible hidden"
             />
             <h3 className="text-center">Design</h3>
           </div>
-          <div className="p-4 border rounded-xl">
+          <div className="lg:p-4 p-1 border lg:rounded-xl rounded-lg">
             <img
               src="https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/home/persona-carousel/icons/product.png"
               alt=""
-              className="w-3/5 mx-auto"
+              className="w-3/5 mx-auto lg:visible hidden"
             />
             <h3 className="text-center">Product</h3>
           </div>
-          <div className="p-4 border rounded-xl">
+          <div className="lg:p-4 p-1 border lg:rounded-xl rounded-lg">
             <img
               src="https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/home/persona-carousel/icons/marketing.png"
               alt=""
-              className="w-3/5 mx-auto"
+              className="w-3/5 mx-auto lg:visible hidden"
             />
             <h3 className="text-center">Marketing</h3>
           </div>
-          <div className="p-4 border rounded-xl">
+          <div className="lg:p-4 p-1 border lg:rounded-xl rounded-lg">
             <img
               src="https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/home/persona-carousel/icons/operations.png"
               alt=""
-              className="w-3/5 mx-auto"
+              className="w-3/5 mx-auto lg:visible hidden"
             />
             <h3 className="text-center">Operations</h3>
           </div>
-          <div className="p-4 border rounded-xl">
+          <div className="lg:p-4 p-1 border lg:rounded-xl rounded-lg">
             <img
               src="https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/home/persona-carousel/icons/hr-v2.png"
               alt=""
-              className="w-3/5 mx-auto"
+              className="w-3/5 mx-auto lg:visible hidden"
             />
             <h3 className="text-center">HR</h3>
           </div>
@@ -348,7 +360,7 @@ const HomePage = () => {
           <img
             src="https://www.notion.so/cdn-cgi/image/format=webp,width=3840/front-static/pages/home/persona-carousel/screenshots/hr.png"
             alt=""
-            className="border rounded-xl"
+            className="border rounded-xl "
           />
         </div>
       </div>
@@ -373,8 +385,8 @@ const HomePage = () => {
             </span>
           </p>
         </div>
-        <img src={Avatar} alt="" className="w-3/5 mx-auto" />
-        <div className="grid grid-cols-3 w-3/5 mx-auto gap-5">
+        <img src={Avatar} alt="" className="lg:w-3/5 mx-auto" />
+        <div className="grid lg:grid-cols-3 grid-rows-3 lg:w-3/5 lg:mx-auto mx-4 gap-5">
           <div className="rounded-lg p-5 space-y-2 border">
             <h1 className="text-6xl text-blue-400 font-bold">1M+</h1>
             <p className="text-sm">community members</p>
@@ -388,7 +400,7 @@ const HomePage = () => {
             <p className="text-sm">countries represented</p>
           </div>
         </div>
-        <div className="my-10 w-3/5 mx-auto grid grid-cols-2 gap-5">
+        <div className="my-10 lg:w-3/5 lg:mx-auto mx-3 grid lg:grid-cols-2 grid-rows-2 gap-5">
           <div className="rounded border">
             <div className="p-5 text-lg">
               <h2 className="font-semibold">An always-on suppport network</h2>
@@ -417,8 +429,8 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="w-3/5 mx-auto flex gap-5">
-          <figure className="border py-14 px-20 w-2/3 rounded-lg">
+        <div className="lg:w-3/5 lg:mx-auto mx-3 flex lg:flex-row flex-col gap-5">
+          <figure className="border lg:py-14 p-5 lg:px-20 lg:w-2/3 rounded-lg">
             <img
               src="https://www.notion.so/cdn-cgi/image/format=webp,width=3840,quality=75/front-static/pages/home/community/community-slide-01.png"
               alt=""
@@ -428,9 +440,9 @@ const HomePage = () => {
               community meet up in tokyo
             </figcaption>
           </figure>
-          <div className="grid grid-rows-3 gap-5 w-1/3">
+          <div className="grid grid-rows-3 gap-5 lg:w-1/3">
             <div className="p-3 border rounded-lg">
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 mb-4">
                 <img
                   src="https://www.notion.so/cdn-cgi/image/format=auto,width=3840,quality=100/front-static/pages/home/avatars/twitter-avatar-deborah.png"
                   alt=""
@@ -487,17 +499,19 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="w-3/5 mx-auto">
+      <div className="lg:w-3/5 mx-auto">
         <div className="text-center space-y-5 my-10">
-          <h1 className="text-5xl font-bold">Endless way to use it</h1>
+          <h1 className="lg:text-5xl text-4xl font-bold">
+            Endless way to use it
+          </h1>
           <p className="text-blue-400 flex justify-center items-center">
-            Browse all templates{" "}
+            Browse all templates
             <span>
-              <ArrowRight />
+              <ArrowRight className="ml-1 w-5" />
             </span>
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid lg:grid-cols-2 gap-5 lg:mx-0 mx-3">
           <div className="border rounded-lg">
             <div className="pl-5 pt-5 space-y-5">
               <Home className="text-red-400" />
@@ -515,88 +529,86 @@ const HomePage = () => {
               className="ml-auto mt-5 w-5/6 rounded-tl-lg rounded-br-lg"
             />
           </div>
-          <div className="">
-            <div className="grid grid-cols-2 gap-5">
-              <div className="border p-5 space-y-5 rounded-lg">
-                <Flag />
-                <h1>Product Roadmap</h1>
-                <p className="flex">
-                  Browse template{" "}
-                  <span>
-                    <ArrowRight className="w-4 " />
-                  </span>
-                </p>
-              </div>
-              <div className="border p-5 space-y-4 rounded-lg">
-                <Flag />
-                <h1>Product Roadmap</h1>
-                <p className="flex">
-                  Browse template{" "}
-                  <span>
-                    <ArrowRight className="w-4 " />
-                  </span>
-                </p>
-              </div>
-              <div className="border p-5 space-y-4 rounded-lg">
-                <Flag />
-                <h1>Product Roadmap</h1>
-                <p className="flex">
-                  Browse template{" "}
-                  <span>
-                    <ArrowRight className="w-4 " />
-                  </span>
-                </p>
-              </div>
-              <div className="border p-5 space-y-4 rounded-lg">
-                <Flag />
-                <h1>Product Roadmap</h1>
-                <p className="flex">
-                  Browse template{" "}
-                  <span>
-                    <ArrowRight className="w-4 " />
-                  </span>
-                </p>
-              </div>
-              <div className="border p-5 space-y-4 rounded-lg">
-                <Flag />
-                <h1>Product Roadmap</h1>
-                <p className="flex">
-                  Browse template{" "}
-                  <span>
-                    <ArrowRight className="w-4 " />
-                  </span>
-                </p>
-              </div>
-              <div className="border p-5 space-y-4 rounded-lg">
-                <Flag />
-                <h1>Product Roadmap</h1>
-                <p className="flex">
-                  Browse template{" "}
-                  <span>
-                    <ArrowRight className="w-4 " />
-                  </span>
-                </p>
-              </div>
+          <div className="grid lg:grid-cols-2 gap-5">
+            <div className="border p-5 space-y-5 rounded-lg">
+              <Flag />
+              <h1>Product Roadmap</h1>
+              <p className="flex">
+                Browse template{" "}
+                <span>
+                  <ArrowRight className="w-4 " />
+                </span>
+              </p>
+            </div>
+            <div className="border p-5 space-y-4 rounded-lg">
+              <Flag />
+              <h1>Product Roadmap</h1>
+              <p className="flex">
+                Browse template{" "}
+                <span>
+                  <ArrowRight className="w-4 " />
+                </span>
+              </p>
+            </div>
+            <div className="border p-5 space-y-4 rounded-lg">
+              <Flag />
+              <h1>Product Roadmap</h1>
+              <p className="flex">
+                Browse template{" "}
+                <span>
+                  <ArrowRight className="w-4 " />
+                </span>
+              </p>
+            </div>
+            <div className="border p-5 space-y-4 rounded-lg">
+              <Flag />
+              <h1>Product Roadmap</h1>
+              <p className="flex">
+                Browse template{" "}
+                <span>
+                  <ArrowRight className="w-4 " />
+                </span>
+              </p>
+            </div>
+            <div className="border p-5 space-y-4 rounded-lg">
+              <Flag />
+              <h1>Product Roadmap</h1>
+              <p className="flex">
+                Browse template{" "}
+                <span>
+                  <ArrowRight className="w-4 " />
+                </span>
+              </p>
+            </div>
+            <div className="border p-5 space-y-4 rounded-lg">
+              <Flag />
+              <h1>Product Roadmap</h1>
+              <p className="flex">
+                Browse template{" "}
+                <span>
+                  <ArrowRight className="w-4 " />
+                </span>
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-10 text-center w-max mx-auto space-y-4">
+      <div className="mt-10 text-center lg:mx-auto mx-3 space-y-4">
         <h1 className="font-bold text-5xl">Get Started for Free</h1>
         <p>Play around with it first. Pay and add your team later</p>
         <div className="flex items-center space-x-5 w-max mx-auto">
-          <button className="p-2 text-white bg-black rounded">
+          <button className="p-2 text-white bg-black rounded text-sm">
             Try Notion Free
           </button>
           <p className="text-blue-400 flex items-center">
-            Request a Demo{" "}
+            Request a Demo
             <span>
               <ArrowRight className="w-4" />
             </span>
           </p>
         </div>
-        <img src={NotionParade} alt="" className="w-2/5 mx-auto" />
+        <img src={NotionParade} alt="" className="lg:w-2/5 mx-auto" />
       </div>
     </div>
   );
