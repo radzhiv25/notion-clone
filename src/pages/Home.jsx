@@ -37,6 +37,20 @@ const heroCardDetail = [
     content: "Simple powerful, beautiful. Next-gen notes & docs.",
   },
 ];
+const img = [
+  {
+    src: "https://www.notion.so/cdn-cgi/image/format=webp,width=3840/front-static/pages/home/persona-carousel/screenshots/hr.png",
+    alt: "HR",
+  },
+  {
+    src: "https://www.notion.so/cdn-cgi/image/format=webp,width=3840/front-static/pages/home/persona-carousel/screenshots/hr.png",
+    alt: "HR",
+  },
+  {
+    src: "https://www.notion.so/cdn-cgi/image/format=webp,width=3840/front-static/pages/home/persona-carousel/screenshots/hr.png",
+    alt: "HR",
+  },
+];
 
 const HomePage = () => {
   return (
@@ -63,7 +77,7 @@ const HomePage = () => {
           alt=""
           className="lg:mx-auto lg:w-2/5 mx-4 w-[calc(100%-5%)]"
         />
-        <div className="grid lg:grid-cols-4 grid-cols-2 gap-5 lg:w-3/5 lg:mx-auto w-auto mx-4">
+        <div className="grid lg:grid-cols-4 grid-cols-2 gap-5 lg:w-3/5 lg:mx-auto mx-4">
           {heroCardDetail.map((item, index) => (
             <HeroCard
               key={index}
@@ -82,7 +96,7 @@ const HomePage = () => {
         <h1 className="text-center font-bold lg:text-5xl text-4xl lg:mx-0 mx-10">
           Millions run on Notion every day
         </h1>
-        <p className="text-center my-3">
+        <p className="text-center my-3 lg:mx-0 mx-4">
           Powering the world's best teams, from next generation startups to
           established enterprises.
         </p>
@@ -350,13 +364,11 @@ const HomePage = () => {
             <h3 className="text-center">HR</h3>
           </div>
         </div>
-        <div className="">
-          <img
-            src="https://www.notion.so/cdn-cgi/image/format=webp,width=3840/front-static/pages/home/persona-carousel/screenshots/hr.png"
-            alt=""
-            className="rounded-xl"
-          />
-        </div>
+        <div className="flex flex-row overflow-scroll">{
+          img.map((item, index) => (
+            <img key={index} src={item.src} alt={item.alt} className="rounded-xl w-full" />
+          ))
+        }</div>
       </div>
 
       <div className="my-10">
