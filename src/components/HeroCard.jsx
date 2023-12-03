@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 const HeroCard = (props) => {
   return (
-    <div className="rounded-xl border shadow-lg p-2 font-semibold space-y-3">
+    <div className="rounded-xl border shadow-lg p-2 font-semibold space-y-3 lg:w-auto w-screen">
       <h1 className="text-2xl flex items-center gap-2">
         <Sparkles className="bg-purple-300 p-1 rounded-md w-8 h-8 text-purple-600" />
         {props.title}
