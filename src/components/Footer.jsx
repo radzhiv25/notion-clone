@@ -92,7 +92,7 @@ const Footer = () => {
             <ChevronDown className="w-4" />
           </div>
         </div>
-        <div className="space-y-11 flex items-baseline gap-5">
+        <div className="space-y-11">
           <div className="space-y-1 w-1/2">
             <h2>Product</h2>
             <ul className="text-gray-500 space-y-1">
@@ -119,7 +119,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="space-y-6 flex items-baseline gap-2">
+        <div className="space-y-6">
           <div className="space-y-1 w-1/3">
             <h2>Download</h2>
             <ul className="text-gray-500 space-y-1">
@@ -150,7 +150,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="space-y-4 flex items-baseline gap-5">
+        <div className="space-y-4 gap-5">
           <div className="space-y-1 w-1/2">
             <h2>Get Started</h2>
             <ul className="text-gray-500 space-y-1">
